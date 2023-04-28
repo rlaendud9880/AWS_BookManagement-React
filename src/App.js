@@ -1,3 +1,8 @@
+/**
+ * @Date : 2023. 4. 28 오전 11:34:00
+ * @File_path : src\pages\Admin\BookRegister\BookRegister.js
+ * @File_name : BookRegister.js
+ */
 import { Global } from '@emotion/react'
 import { Reset } from "./styles/Global/reset";
 import { Route, Routes } from 'react-router-dom';
@@ -7,6 +12,7 @@ import Main from './pages/Main/Main';
 // import AuthRoute from './components/Routes/AuthRoute/AuthRoute';
 import AuthRouteReactQuery from './components/Routes/AuthRoute/AuthRouteReactQuery';
 import BookDetail from './pages/BookDetail/BookDetail';
+import BookRegister from './pages/Admin/BookRegister/BookRegister';
 
 function App() {
   return (
@@ -16,8 +22,8 @@ function App() {
         <Route exact path="/login" element={ <AuthRouteReactQuery path="/login" element={<Login />} /> } />
         <Route path="/register" element={ <AuthRouteReactQuery path="/register" element={<Register />} /> } />
         <Route path="/" element={ <AuthRouteReactQuery path="/" element={<Main />} /> } />
-        <Route path="/book/:bookId" element={ <AuthRouteReactQuery path="/book" element={<BookDetail />} /> } />
-        <Route path="/admin/search" element={ <AuthRouteReactQuery path="/" element={<Main />} /> } />
+        <Route path="/book/:bookId" element={ <AuthRouteReactQuery path="/book" element={<BookDetail />} /> } /> 
+        <Route path="/admin/book/register" element={ <AuthRouteReactQuery path="/admin/book/register" element={<BookRegister />} /> } />
 
       </Routes>
     </>
